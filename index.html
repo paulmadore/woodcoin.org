@@ -40,7 +40,6 @@
 					<p>Woodcoin’s reward decrease is a harmonic series, which more closely models renewable resources rather than non-renewable. This means that while it is always better to chop LOGs today, there will still always be an incentive to chop tomorrow. That's even before fees are considered!</p>
 					<p>The logarithmic money supply curve is designed for stability and longevity, with the longest reward schedule of any other cryptocurrency. Half the LOGs will be released in the first 200 years, instead of the first 4 years (like Bitcoin). However, every block is worth less than the preceding one - so earlier adopters are always rewarded.</p>
 				</article>
-
 				<article id="trade">
 					<h2 class="major">Get Equipped!</h2>
 					<span class="image main"><img src="/img/pic04.jpg" alt="" /></span>
@@ -71,8 +70,6 @@
 					<h3 class="major">Free coin!</h3>
 					<a href="http://cryptoguru.tk/Faucet/index.php?Currency=LOG">CryptoGuru.tk</a> (NON-HTTPS)
 				</article>
-
-
 				<article id="techs">
 					<h2 class="major">Technical Details</h2>
 					<span class="image main"><img src="/img/pic01.jpg" alt="" /></span>
@@ -82,29 +79,24 @@
 					<ul>This is the first consensus network built solely with the skein hash function. Read more about Skein <a href="http://skein-hash.info/about">here</a> (NON-HTTPS). We hope to encourage further use and testing of the Skein family with this coin.</ul>
 
 					<li>Elliptic Curve for Digital Signatures: X9_62_prime256v1.</li>
-					<ul>To sign transactions and create public and private addresses we use the elliptic curve digital signature algorithm ECDSA just like bitcoin. However we use a different curve as a basis to do so. This curve is perhaps the most used in the financial industry. Some people think it is better. We like to encourage cryptographic diversity.</ul>
+					<ul>To sign transactions and create public and private addresses we use the elliptic curve digital signature algorithm ECDSA just like Bitcoin. However we use a different curve as a basis to do so. This curve is perhaps the most used in the financial industry. Some people think it is better. We like to encourage cryptographic diversity.</ul>
 
 					<li>Logarithmic Coin Release</li>
 					<ul>Woodcoin is the first coin to use a logarithmic coin release. The woodcutting reward is continually adjusted according to the harmonic series. From /src/main.cpp:
-
 <pre><code>int64 static GetBlockValue(int nHeight, int64 nFees) {
 	int64 nSubsidy = 1000000 * COIN;
 	if (nHeight&lt;100) return 1*COIN;
 	else return nSubsidy/nHeight + nFees;
 }</code></pre>
-
 					This leads to a total money supply S which increases logarithmically in block height n:
-
 <pre><code>log = natural logarithm
 gamma = euler-mascheroni constant
 forest = 5187377.51763962
 S = 1000000* ( log n + gamma ) – forest
-</code></pre> 
-
-Unlike Bitcoin and most other cryptocurrencies, the reward will never drop to zero and will smoothly decrease. (Techinically it is scheduled to reach zero when the reward drops to under 1 satoshi but that isn’t for about 350 million years) Here is a plot of the woodcutting reward per day, compared to bitcoin, for the next 50 years or so: <span class="image main"><img src="/img/woodcoin-v-bitcoin-distribution.png" alt="" /></span></ul>
+</code></pre>
+Unlike Bitcoin and most other cryptocurrencies, the reward will never drop to zero and will smoothly decrease. (Technically it is scheduled to reach zero until the reward drops to under 1 Logatoshi, but that isn’t for about 350 million years.) Here is a plot of the woodcutting reward per day, compared to Bitcoin, for the next 50 years or so: <span class="image main"><img src="/img/woodcoin-v-bitcoin-distribution.png" alt="" /></span></ul>
 					<br/>
 				</article>
-
 				<article id="code">
 					<h2 class="major">Code</h2>
 					<span class="image main"><img src="/img/pic03.jpg" alt="" /></span>
@@ -130,7 +122,7 @@ Unlike Bitcoin and most other cryptocurrencies, the reward will never drop to ze
 					<br/>
 					<b>Mac: </b>Not Available (Yet) / <a href="https://github.com/woodcoin-core/woodcoin-mac/">Github</a>
 					<br/>
-					<b>Windows: </b>Not Available (Yet)</a> / <a href="https://github.com/woodcoin-core/woodcoin-windows/">Github</a>
+					<b>Windows: </b>Not Available (Yet) / <a href="https://github.com/woodcoin-core/woodcoin-windows/">Github</a>
 					<br/>
 					<br/>
 					<h3>Miner</h3>
@@ -140,7 +132,6 @@ Unlike Bitcoin and most other cryptocurrencies, the reward will never drop to ze
 					<h3>Miscellaneous</h3>
 					<b>Linux/Mac/Windows: </b><a href="https://github.com/woodcoin-core/vanitygen/">VanityGen</a>
 				</article>
-
 				<article id="contact">
 					<h2 class="major">Contact</h2>
 					<span class="image main"><img src="/img/pic06.jpg" alt="" /></span>
@@ -148,22 +139,15 @@ Unlike Bitcoin and most other cryptocurrencies, the reward will never drop to ze
 					<br/>
 					<a href="https://github.com/woodcoin-core">Woodcoin Core Team Github</a>
 				</article>
-
 			</div>
-
 			<footer id="footer">
 				<p class="copyright">Design: <a href="https://html5up.net">HTML5 UP</a>
-
 			</footer>
-
 		</div>
-
 		<div id="bg"></div>
-
 		<script src="/js/jquery.min.js"></script>
 		<script src="/js/skel.min.js"></script>
 		<script src="/js/util.js"></script>
 		<script src="/js/main.js"></script>
-
 	</body>
 </html>
